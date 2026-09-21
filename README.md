@@ -1,6 +1,6 @@
 # AIOps Payment Service Simulation
 
-## Scenario
+## Scenario of case
 
 This repository monitors a synthetic `payment-service`. The operational problem is identifying slow or resource-constrained payment requests and error logs early enough for an operations team to investigate them. AIOps is used here to turn telemetry into explainable anomaly events and carry those events through a lightweight event-processing workflow.
 
