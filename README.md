@@ -1,6 +1,6 @@
 # AIOps Payment Service Simulation
 
-## Scenario of case
+## Scenario
 
 This repository monitors a synthetic `payment-service`. The operational problem is identifying slow or resource-constrained payment requests and error logs early enough for an operations team to investigate them. AIOps is used here to turn telemetry into explainable anomaly events and carry those events through a lightweight event-processing workflow.
 
@@ -51,10 +51,11 @@ The pipeline processes each operational record with `AnomalyDetector`. For each 
 
 Running `python3 src/aiops_pipeline.py` produces:
 
-text
+```text
 Records processed: 10
 Anomalies detected: 2
 Events consumed: 2
+```
 
 
 The output lists both `payment-service` anomaly events with their timestamps and detection reasons, demonstrating the flow from operational data through detection, event generation, producer, topic, consumer, and final AIOps output.
@@ -63,12 +64,14 @@ The output lists both `payment-service` anomaly events with their timestamps and
 
 From the repository root:
 
-bash
+```bash
 python3 -m pytest -q
 python3 src/aiops_pipeline.py
+```
 
 
-The validation suite should report 9 passed. The second command should report 10 records processed," 2 "anomalies detected, and "2 events consumed.
+The validation suite should report `9 passed`. The second command should report
+`10` records processed, `2` anomalies detected, and `2` events consumed.
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
